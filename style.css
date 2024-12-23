@@ -4,6 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/*----------------FONT And LAYOUT------------------*/
+/*Import from internet - add lokal https://www.1001fonts.com/ticking-timebomb-bb-font.html*/
 @font-face {
   font-family: 'MyCustomFont';
   src: url('styleguide/fonts/ticking-timebomb-bb/TickingTimebombBB.ttf') format('truetype'),
@@ -12,35 +15,107 @@
   font-style: normal;
 }
 
-.introduction{
-  margin-top: -44%;
-  left: 8%;
-  position: absolute;
-  display: flex;
-}
-h3{
-  font-size: 1.5rem;
-  font-weight: 400;
-  text-wrap: nowrap;
-}
-html,
-body {
+html,body {
+  background-color: black;
   display: flex;
   position: relative;
   justify-items: center;
   align-items: center;
-  background-color: black;
   width: 100%;
   height: 100%;
-  color: white;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
   overflow-y: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
   font-family:'MyCustomFont';
   font-size: 1.5em;
 }
 
-/* LOADING PAGE*/
+/*----------------BACKGROUND------------------*/
+.redline{
+  width: 38%;
+  margin-top: -53%;
+  left: -2%;
+  position: fixed;
+  display: flex;
+  transition: 0.5s;   
+  animation-name: redLinescale;   
+  animation-delay: 0s;
+  animation-duration: 4.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;  
+  z-index: -0.5; 
+}
+@keyframes redLinescale {                                          
+  0% {
+    opacity: 30%;                                           
+  }
+  100% {
+    opacity: 100%;                                             
+  }
+}
+.blueline{
+  width: 35%;
+  margin-top: -16%;
+  left: 70%;
+  position: fixed;
+  display: flex;
+  animation-name: blueLinescale;   
+  animation-delay: 0s;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  z-index: -0.2;
+}
+@keyframes blueLinescale {                                          
+  0% {
+    opacity: 30%;                                           
+  }
+  100% {
+    opacity: 100%;                                             
+  }
+}
+
+/*----------------HEADLINE AND TEXT------------------*/
+h3{
+  font-size: 1.0rem;
+  font-weight: 400;
+  text-wrap: nowrap;
+}
+h4{
+  font-size: 1em;
+  letter-spacing: 0.15em;
+  text-wrap: nowrap;
+  font-weight: lighter;
+}
+
+/* TYPEWRITER EFFECT */
+.typewriter h3 {
+  overflow: hidden;                     /* Ensures the content is not revealed until the animation */
+  border-right: .10em solid #F6F6F6; /* The typwriter cursor */
+  white-space: nowrap;              
+  margin: 0 auto; 
+  letter-spacing: .10em;
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+    margin-top: 20%;
+    left: 3%;
+    position: fixed;
+    display: flex;
+}
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 20% }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #F6F6F6}
+}
+
+/*----------------FOR LOADING PAGE------------------*/
 #loader {
   width: 8%;
   position: absolute;
@@ -72,7 +147,7 @@ body {
   }
 }
 
-/* HOMPAGE FADE IN */
+/*----------------FOR INDEX PAGE------------------*/
 .homepage {
   position: relative;
   -webkit-animation-name: homepagfadeIn;
@@ -105,7 +180,7 @@ body {
   text-align: center;
 }
 
-/* HEADER + NAVIGATION*/
+/* Header + Navigation*/
 header {
   background-color: black;
   width: 100%;
@@ -121,166 +196,157 @@ header {
 .logo {
   width: 6%;
   height: 100%;
-  margin-left: 45%;
+  margin-left: 48%;
   z-index: 2;
+  transition: 3s ease;
 }
-/*BURGER MENU*/
-.off_screen_menu{
-    background-color:  #f6f6f680;
-    border: 8px solid #23EDF4;
-    box-shadow: 0 0 10px 5px #23EDF4;
-    border-radius: 25px;
-    opacity: 30%;
-    height: 80vh;
-    width: 20vw;
-    max-width: 450px;
-    position: absolute;
-    top: 50%;
-    right: -450px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;    
-    justify-content: center;
-    text-align: center;
-    font-size: 3rem;
-    transition: .6s ease;
+.logo:hover{
+  transform: scale(1.1);
 }
-.off_screen_menu.active {
-    right: 140px;
-    opacity: 50%;
+/* Burger-Menü */
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 1000;
+  margin-right: 3%;
+  opacity: 30%;
+  transition: 0.5s ease;
 }
-nav {
-    padding: 1rem;
-    display: flex;
+.burger-menu:hover{
+  opacity: 80%;
+  transform: scale(1.1);
 }
-ul{
-    color: white;
-    list-style-type: none;
-    line-height: 3em;
+.burger-menu span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  transition: 0.3s ease;
 }
-a{
-    text-decoration: none;
+/* Navigation (Side Menu) */
+.side-menu {
+  position: absolute;
+  top: 5%;
+  margin-right: 10%;
+  right: -410px; /* Startet außerhalb des Bildschirms */
+  height: 60vh;
+  width: 15%;
+  background-color: hsla(0, 0%, 100%, 0.163);
+  border: 5px solid #23edf476;
+  box-shadow: 0 0 10px 5px #23edf48f;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  transition: right 0.3s ease; /* Animiert das Ein- und Ausfahren */
+  z-index: -1;
 }
-/* ham menu */
-.ham-menu {
-    margin-left: auto;
-    position: relative;
+.side-menu.active {
+  right: 0; /* Schiebt das Menü ins Bild */
 }
-.burger{
-    width: 60%;
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
-.ham-menu span {
-    opacity: 30%;
-    border-radius: 25px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    transition: .3s ease;
+.side-menu ul li {
+  margin: 1rem 0;
+  text-align: center;
 }
-.ham-menu.active span {
-    opacity: 100%;
+.side-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 2.5rem;
+  padding: 0.6rem 1rem;
+  display: block;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
 }
-.ham-menu.active span:nth-child(1) {
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
+.side-menu ul li a:hover {
+  color: #23EDF4;
 }
-.ham-menu.active span:nth-child(2) {
-    opacity: 0;
+.side-menu ul li a:active {
+  color: #F6344E;
 }
-.ham-menu.active span:nth-child(3) {
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
+/* Animation für den Burger-Button */
+.burger-menu.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.burger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger-menu.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+.hidden {
+  display: none;
 }
 
-/*BACKGROUND*/
-.redline{
-    width: 70%;
-    margin-top: 2%;
-    left:-5%;
-    position: absolute;
-    display: flex;
-}
-.blueline{
-    width: 70%;
-    margin-top: 55%;
-    left: 180%;
-    position: relative;
-    display: flex;
-}
-
-/*BUTTONS*/
-
+/*----------------FOR BUTTONS------------------*/
 /*Power Button*/
 #power_btn {
-  width: 100px; /* Breite des Button-Bildes */
-  height: auto; /* Seitenverhältnis beibehalten */
-  transition: transform 0.3s ease; /* Optional: Animation bei Hover */
-  position: absolute;
-  margin-top: -100%;
-  margin-left: 61.5%;
+  width: 100px; 
+  height: auto;
+  transition: transform 0.3s ease; 
+  position: fixed;
+  margin-left: 47.8%;
+  margin-top: -6%;
   opacity: 15%;
 }
-
 #power_btn:hover {
-  transform: scale(1.1); /* Vergrößert das Bild leicht beim Hover */
+  transform: scale(1.1); 
   opacity: 80%;
 }
-
 #head_animation{
-  max-width: 65%; /* Zielbild bleibt responsiv */
+  max-width: 25%;
   height: auto;
-  display: none; /* Versteckt das Bild standardmäßig */
-  position: absolute;
-  margin-top: -130%;
-  margin-left: 88%;
+  display: none;
+  position: fixed;
+  margin-top: -14%;
+  margin-left: 39%;
 }
 
+
+/*Lastest Work Button and Window*/
 #showLatestwork_btn{
-  width: 50px; /* Breite des Button-Bildes */
-  height: auto; /* Seitenverhältnis beibehalten */
-  transition: transform 0.3s ease; /* Optional: Animation bei Hover */
-  position: absolute;
+  width: 50px; 
+  height: auto;
+  transition: transform 0.3s ease; 
+  position:fixed;
   display: none; 
-  margin-top: -120%;
-  margin-left: 160%;
-  transition: moveAndScale 0.5s ease, box-shadow 0.5s ease;
-}
-@keyframes moveAndScale {
-  0% {
-      width: 50px;
-  }
-  50% {
-      width: 60px;
-  }
-  100% {
-      width: 80px;
-  }
+  margin-top: -10%;
+  margin-left: 65%;
+  transition: 1.5s ease, box-shadow 0.5s ease;
 }
 #showLatestwork_btn:hover{
-  transform: scale(1.1); /* Vergrößert das Bild leicht beim Hover */
-  opacity: 80%;
+  transform: scale(1.8); 
   content: url('buttons/window_button_blue.svg');
   transform: translateY(-5px) scale(1.05);
 }
 .modalBlue {
-  display: none; /* Versteckt das Modal */
-  position: absolute; /* Fixiert das Modal im Fenster */
+  display: none;
+  position: fixed; 
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter Hintergrund */
+  width: 40%;
+  height: 160vh;
+  background-color: rgba(0, 0, 0, 0.5); 
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Über anderen Inhalten */
-  margin-top: -10%;
-  margin-left: 150%;
+  z-index: 1000; 
+  margin-top: -20%;
+  margin-left: 62%;
 }
-
-/* Inhalt des Modals */
+/*window for latest work*/
 .modalBlue-content {
-  background-color:  #f6f6f680;
+  background-color:  hsla(0, 0%, 100%, 0.163);
   border: 5px solid #23edf476;
   box-shadow: 0 0 10px 5px #23edf48f;
   border-radius: 25px;
@@ -289,8 +355,6 @@ a{
   height: 25%;
   text-align: center;
 }
-
-/* Schließen-Button */
 .closeBlue {
   font-size: 20px;
   font-weight: bold;
@@ -300,15 +364,11 @@ a{
   top: 10px;
   right: 20px;
 }
-h4{
-  font-size: 1em;
-}
 #LatestWorkImg{
   margin-top: 10%;
   width: 100%;
   filter: grayscale(100%);
 }
-
 #LinkToLatestWork{
   width: 20%;
 }
@@ -316,52 +376,39 @@ h4{
   content: url('buttons/arrow_link_latest_work_blue.svg');
 }
 
-
-
+/*Contact Button and Window*/
 #showContact_btn{
-  width: 50px; /* Breite des Button-Bildes */
-  height: auto; /* Seitenverhältnis beibehalten */
-  transition: transform 0.3s ease; /* Optional: Animation bei Hover */
-  position: absolute;
+  width: 50px; 
+  height: auto; 
+  transition: transform 0.3s ease; 
+  position: fixed;
   display: none; 
-  margin-top: -70%;
-  margin-left: 70%;
-  transition: moveAndScale 0.5s ease, box-shadow 0.5s ease;
+  margin-top: 8%;
+  margin-left: 34%;
+  transition: 1.5s ease, box-shadow 0.5s ease;
 }
-@keyframes moveAndScale {
-  0% {
-      width: 50px;
-  }
-  50% {
-      width: 60px;
-  }
-  100% {
-      width: 80px;
-  }
-}
-#showContactBtn:hover{
-  transform: scale(1.1); /* Vergrößert das Bild leicht beim Hover */
-  opacity: 80%;
+#showContact_btn:hover{
+  transform: scale(1.8); 
   content: url('buttons/window_button_red.svg');
   transform: translateY(-5px) scale(1.05);
 }
 .modalRed {
-  display: none; /* Versteckt das Modal */
-  position: absolute; /* Fixiert das Modal im Fenster */
+  display: none; 
+  position: fixed; 
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter Hintergrund */
+  left: -2%;
+  width: 40%;
+  height: 160vh;
+  background-color: rgba(0, 0, 0, 0.5); 
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Über anderen Inhalten */
-  margin-top: 5%;
-  margin-left: -12%;
+  z-index: 1000; 
+  margin-top: -8%;
+  margin-left: 2%;
 }
-/* Inhalt des Modals */
+/*window for contact*/
 .modalRed-content {
-  background-color:  #f6f6f680;
+  background-color:  hsla(0, 0%, 100%, 0.163);
   border: 5px solid #f6344e6b;
   box-shadow: 0 0 10px 5px #f6344e7c;
   border-radius: 25px;
@@ -370,7 +417,6 @@ h4{
   height: 25%;
   text-align: center;
 }
-/* Schließen-Button */
 .closeRed {
   font-size: 20px;
   font-weight: bold;
@@ -380,28 +426,40 @@ h4{
   top: 10px;
   right: 20px;
 }
-
-
 .IconMail{
-  margin-top: 10%;
+  margin-top: 8%;
+  transition: 1.5s ease, box-shadow 0.5s ease;
+  opacity: 30%;
+}
+.IconMail:hover{
+  transform: scale(1.1); 
+  opacity: 80%;
 }
 
 #email{
   font-size: 0.5em;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.5em;
 }
-
 .IconInstagram{
   width: 25%;
-  margin-top: 5%;
+  margin-top: 8%;
   float: left;
+  transition: 1.5s ease, box-shadow 0.5s ease;
+  opacity: 30%;
+}
+.IconInstagram:hover{
+  transform: scale(1.1); 
+  opacity: 80%;
 }
 .IconInstagram2{
   width: 25%;
-  margin-top: 5%;
+  margin-top: 8%;
   float: center;
 }
 .IconInstagram3{
   width: 25%;
-  margin-top: 5%;
+  margin-top: 8%;
   float: right;
 }
