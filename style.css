@@ -13,13 +13,13 @@
 }
 
 .introduction{
-  margin-top: -45%;
-  left: 10%;
+  margin-top: -44%;
+  left: 8%;
   position: absolute;
   display: flex;
 }
 h3{
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
   text-wrap: nowrap;
 }
@@ -37,6 +37,7 @@ body {
   overflow-x: hidden;
   overflow-y: hidden;
   font-family:'MyCustomFont';
+  font-size: 1.5em;
 }
 
 /* LOADING PAGE*/
@@ -121,9 +122,10 @@ header {
   width: 6%;
   height: 100%;
   margin-left: 45%;
+  z-index: 2;
 }
 /*BURGER MENU*/
-.off-screen-menu {
+.off_screen_menu{
     background-color:  #f6f6f680;
     border: 8px solid #23EDF4;
     box-shadow: 0 0 10px 5px #23EDF4;
@@ -143,7 +145,7 @@ header {
     font-size: 3rem;
     transition: .6s ease;
 }
-.off-screen-menu.active {
+.off_screen_menu.active {
     right: 140px;
     opacity: 50%;
 }
@@ -210,24 +212,196 @@ a{
 /*BUTTONS*/
 
 /*Power Button*/
-#showImageBtn {
+#power_btn {
   width: 100px; /* Breite des Button-Bildes */
   height: auto; /* Seitenverhältnis beibehalten */
   transition: transform 0.3s ease; /* Optional: Animation bei Hover */
   position: absolute;
   margin-top: -100%;
   margin-left: 61.5%;
+  opacity: 15%;
 }
 
-#showImageBtn:hover {
+#power_btn:hover {
   transform: scale(1.1); /* Vergrößert das Bild leicht beim Hover */
+  opacity: 80%;
 }
 
-#image {
-  max-width: 100%; /* Zielbild bleibt responsiv */
+#head_animation{
+  max-width: 65%; /* Zielbild bleibt responsiv */
   height: auto;
   display: none; /* Versteckt das Bild standardmäßig */
   position: absolute;
-  margin-top: -%;
-  margin-left: 61%;
+  margin-top: -130%;
+  margin-left: 88%;
+}
+
+#showLatestwork_btn{
+  width: 50px; /* Breite des Button-Bildes */
+  height: auto; /* Seitenverhältnis beibehalten */
+  transition: transform 0.3s ease; /* Optional: Animation bei Hover */
+  position: absolute;
+  display: none; 
+  margin-top: -120%;
+  margin-left: 160%;
+  transition: moveAndScale 0.5s ease, box-shadow 0.5s ease;
+}
+@keyframes moveAndScale {
+  0% {
+      width: 50px;
+  }
+  50% {
+      width: 60px;
+  }
+  100% {
+      width: 80px;
+  }
+}
+#showLatestwork_btn:hover{
+  transform: scale(1.1); /* Vergrößert das Bild leicht beim Hover */
+  opacity: 80%;
+  content: url('buttons/window_button_blue.svg');
+  transform: translateY(-5px) scale(1.05);
+}
+.modalBlue {
+  display: none; /* Versteckt das Modal */
+  position: absolute; /* Fixiert das Modal im Fenster */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter Hintergrund */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Über anderen Inhalten */
+  margin-top: -10%;
+  margin-left: 150%;
+}
+
+/* Inhalt des Modals */
+.modalBlue-content {
+  background-color:  #f6f6f680;
+  border: 5px solid #23edf476;
+  box-shadow: 0 0 10px 5px #23edf48f;
+  border-radius: 25px;
+  padding: 20px;
+  width: 50%;
+  height: 25%;
+  text-align: center;
+}
+
+/* Schließen-Button */
+.closeBlue {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+h4{
+  font-size: 1em;
+}
+#LatestWorkImg{
+  margin-top: 10%;
+  width: 100%;
+  filter: grayscale(100%);
+}
+
+#LinkToLatestWork{
+  width: 20%;
+}
+#linkToLatestWork:hover{
+  content: url('buttons/arrow_link_latest_work_blue.svg');
+}
+
+
+
+#showContact_btn{
+  width: 50px; /* Breite des Button-Bildes */
+  height: auto; /* Seitenverhältnis beibehalten */
+  transition: transform 0.3s ease; /* Optional: Animation bei Hover */
+  position: absolute;
+  display: none; 
+  margin-top: -70%;
+  margin-left: 70%;
+  transition: moveAndScale 0.5s ease, box-shadow 0.5s ease;
+}
+@keyframes moveAndScale {
+  0% {
+      width: 50px;
+  }
+  50% {
+      width: 60px;
+  }
+  100% {
+      width: 80px;
+  }
+}
+#showContactBtn:hover{
+  transform: scale(1.1); /* Vergrößert das Bild leicht beim Hover */
+  opacity: 80%;
+  content: url('buttons/window_button_red.svg');
+  transform: translateY(-5px) scale(1.05);
+}
+.modalRed {
+  display: none; /* Versteckt das Modal */
+  position: absolute; /* Fixiert das Modal im Fenster */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter Hintergrund */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Über anderen Inhalten */
+  margin-top: 5%;
+  margin-left: -12%;
+}
+/* Inhalt des Modals */
+.modalRed-content {
+  background-color:  #f6f6f680;
+  border: 5px solid #f6344e6b;
+  box-shadow: 0 0 10px 5px #f6344e7c;
+  border-radius: 25px;
+  padding: 20px;
+  width: 50%;
+  height: 25%;
+  text-align: center;
+}
+/* Schließen-Button */
+.closeRed {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+
+.IconMail{
+  margin-top: 10%;
+}
+
+#email{
+  font-size: 0.5em;
+}
+
+.IconInstagram{
+  width: 25%;
+  margin-top: 5%;
+  float: left;
+}
+.IconInstagram2{
+  width: 25%;
+  margin-top: 5%;
+  float: center;
+}
+.IconInstagram3{
+  width: 25%;
+  margin-top: 5%;
+  float: right;
 }

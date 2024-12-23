@@ -1,0 +1,22 @@
+<svg width="77" height="73" viewBox="0 0 77 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_f_191_1288)">
+<rect x="7" y="7" width="62.8401" height="59" rx="13" stroke="white" stroke-opacity="0.5" stroke-width="6"/>
+<path d="M51.6343 36.4998C51.6343 44.2508 45.4999 50.4409 38.0466 50.4409C30.5933 50.4409 24.459 44.2508 24.459 36.4998C24.459 28.7488 30.5933 22.5586 38.0466 22.5586C45.4999 22.5586 51.6343 28.7488 51.6343 36.4998Z" stroke="white" stroke-opacity="0.5" stroke-width="5"/>
+<mask id="path-3-inside-1_191_1288" fill="white">
+<ellipse cx="56.7519" cy="21.2058" rx="3.36718" ry="3.44118"/>
+</mask>
+<ellipse cx="56.7519" cy="21.2058" rx="3.36718" ry="3.44118" fill="white" fill-opacity="0.3"/>
+<path d="M55.1191 21.2058C55.1191 20.4479 55.7483 19.647 56.7519 19.647V29.647C61.4749 29.647 65.1191 25.7647 65.1191 21.2058H55.1191ZM56.7519 19.647C57.7556 19.647 58.3848 20.4479 58.3848 21.2058H48.3848C48.3848 25.7647 52.029 29.647 56.7519 29.647V19.647ZM58.3848 21.2058C58.3848 21.9637 57.7556 22.7646 56.7519 22.7646V12.7646C52.029 12.7646 48.3848 16.6469 48.3848 21.2058H58.3848ZM56.7519 22.7646C55.7483 22.7646 55.1191 21.9637 55.1191 21.2058H65.1191C65.1191 16.6469 61.4749 12.7646 56.7519 12.7646V22.7646Z" fill="white" fill-opacity="0.5" mask="url(#path-3-inside-1_191_1288)"/>
+</g>
+<rect x="6" y="6" width="64.4942" height="60.6734" rx="14" stroke="white" stroke-opacity="0.5" stroke-width="4"/>
+<path d="M51.8808 36.3361C51.8808 44.3073 45.569 50.6947 37.874 50.6947C30.179 50.6947 23.8672 44.3073 23.8672 36.3361C23.8672 28.3649 30.179 21.9775 37.874 21.9775C45.569 21.9775 51.8808 28.3649 51.8808 36.3361Z" stroke="white" stroke-opacity="0.5" stroke-width="4"/>
+<path d="M60.3722 21.5009C60.3722 23.3919 58.8723 24.9248 57.022 24.9248C55.1717 24.9248 53.6717 23.3919 53.6717 21.5009C53.6717 19.61 55.1717 18.0771 57.022 18.0771C58.8723 18.0771 60.3722 19.61 60.3722 21.5009Z" fill="white" fill-opacity="0.3"/>
+<path d="M57.8722 21.5009C57.8722 22.0627 57.4406 22.4248 57.022 22.4248C56.6033 22.4248 56.1717 22.0627 56.1717 21.5009C56.1717 20.9392 56.6033 20.5771 57.022 20.5771C57.4406 20.5771 57.8722 20.9392 57.8722 21.5009Z" stroke="white" stroke-opacity="0.5" stroke-width="5"/>
+<defs>
+<filter id="filter0_f_191_1288" x="0" y="0" width="76.8398" height="73" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_191_1288"/>
+</filter>
+</defs>
+</svg>

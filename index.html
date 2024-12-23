@@ -5,43 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Monika Ho</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://www.1001fonts.com/ticking-timebomb-bb-font.html" rel="stylesheet">
 </head>
+
+<!--Loading Page (First Page)-->
 <body onload="myFunction()" style="margin:0;">
+  <img id="loader" src="graphics/SVG/logo.svg" alt="logo"></div>
 
-    <img id="loader" src="graphics/SVG/logo.svg" alt="logo"></div>
-    
-    <div style="display:none;" id="myDiv" class="homepage">
-        <header>
-            <img class="logo" src="graphics/SVG/logo.svg" alt="logo">
-            
-            <div class="off-screen-menu">
-                <ul>
-                  <li><a href="#">HOME</a></li>
-                  <li><a href="#">ABOUT</a></li>
-                  <li><a href="#">WORK</a></li>
-                </ul>
-              </div>
+  <!--Homepage opens from here-->
+  <div style="display:none;" id="myDiv" class="homepage">
+      
+    <header>
+      <img class="logo" src="graphics/SVG/logo.svg" alt="logo">
 
-              <nav>
-                <div class="ham-menu">
-                    <img class="burger" src="buttons/hamburger.svg" alt="Burger Menu">
-                </div>
-              </nav>
+      <!--Navigation - Burger Menu-->
+      <div class="off_screen_menu">
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">WORK</a></li>
+        </ul>
+      </div>
+      <nav>
+       <div class="ham-menu">
+          <img class="burger" src="buttons/hamburger.svg" alt="Burger Menu">
+        </div>
+      </nav>
+    </header>
 
-        </header>
-        <img class="redline" src="graphics/webp/red_lines.webp" alt="redline">
-        <img class="blueline" src="graphics/webp/blue_lines.webp" alt="blueline">
-        <div class="introduction">
+      <!--background images-->
+      <img class="redline" src="graphics/webp/red_lines.webp" alt="redline">
+      <img class="blueline" src="graphics/webp/blue_lines.webp" alt="blueline">
+
+      <div class="introduction"> 
         <h3> WELCOME TO MY CREATIVE SPACE</h3>
       </div>
-      <img id="showImageBtn" src="buttons/power_button.svg" alt="Button Bild" style="cursor: pointer;">
-      <img id="image" src="graphics/head_animateV2.gif" alt="Zielbild" style="display: none;">
+
+      <!--Power button-->
+      <img id="power_btn" src="buttons/power_button.svg" alt="Button Bild" style="cursor: pointer;">
+      <img id="head_animation" src="graphics/head_animateV2.gif" alt="Zielbild" style="display: none;">
+
+      <!--Contact window-->
+      <img id="showContact_btn" src="buttons/window_button_white.svg" alt="Button Bild" style="cursor: pointer; display: none;">
+      <div id="modalRed" class="modalRed">
+        <div class="modalRed-content">
+          <span id="closeModalBtnRed" class="closeRed">&times;</span>
+          <h4>LET'S CONNECT</h4>
+          <a href="https://example.com" target="_blank">
+            <img class="IconMail" src="/buttons/email_icon.svg" alt="Ein verlinktes Bild">
+          </a>
+          <a id="email" href="https://example.com" target="_blank">hocamtumonika29@gmail.com</a>
+          <a href="https://example.com" target="_blank">
+            <img class="IconInstagram" src="/buttons/instagram_icon.svg" alt="Ein verlinktes Bild">
+          </a>
+          <a href="https://example.com" target="_blank">
+            <img class="IconInstagram2" src="/buttons/instagram_icon.svg" alt="Ein verlinktes Bild">
+          </a>
+          <a href="https://example.com" target="_blank">
+            <img class="IconInstagram3" src="/buttons/instagram_icon.svg" alt="Ein verlinktes Bild">
+          </a>
+        </div>
       </div>
 
-    <footer>
+      <!--Last work window-->
+      <img id="showLatestwork_btn" src="buttons/window_button_white.svg" alt="Button Bild" style="cursor: pointer; display: none;">
+      <div id="modalBlue" class="modalBlue">
+        <div class="modalBlue-content">
+          <span id="closeModalBtnBlue" class="closeBlue">&times;</span>
+          <h4>LATEST WORK</h4>
+          <img id="LatestWorkImg" src="works/ikigai_webdesign/ikigai_img_4.png" alt="placeholder">
+          <img id="LinkToLatestWork" src="buttons/arrow_link_latest_work_white.svg" alt="Button Bild" style="cursor: pointer;">
+        </div>
+      </div>
+  </div>
+
+  <footer>
         
-    </footer>
-    <script src="script.js"></script>
+  </footer>
+  <script src="script.js"></script>
+
 </body>
+
 </html>
