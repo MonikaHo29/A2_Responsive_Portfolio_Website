@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 531.44 1056.66">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #23edf4;
+        stroke-miterlimit: 10;
+        stroke-width: 5px;
+      }
+
+      .cls-2 {
+        fill: #23edf4;
+      }
+    </style>
+  </defs>
+  <g id="Ebene_2-2" data-name="Ebene 2">
+    <g>
+      <g>
+        <polyline class="cls-1" points="530.53 78.16 402.72 78.16 304.67 210.18 92.6 210.18"/>
+        <polyline class="cls-1" points="530.53 162.52 485.09 162.46 355.12 23.4 155.79 23.4 97.91 101.57 17.93 102.48"/>
+        <polyline class="cls-1" points="531.44 248.41 451.8 248.41 411.47 363.32 261.62 363.32 206.06 456.93 110.24 456.93"/>
+        <polyline class="cls-1" points="530.53 200.86 410.56 200.86 274.23 162.52 151.41 163.13"/>
+        <polyline class="cls-1" points="531.44 400.24 412.44 400.24 329.52 296.06 200.82 296.06"/>
+        <polyline class="cls-1" points="530.53 516.81 359.72 516.81 274.23 492.27 195.67 492.27 132.44 567.82 84.36 567.79"/>
+        <polyline class="cls-1" points="530.53 451.37 420.1 451.37 359.72 412.51 313.75 412.51"/>
+        <polyline class="cls-1" points="530.53 2.5 446.69 2.5 412.38 41.58 312.57 40.79"/>
+        <polyline class="cls-1" points="531.44 316.4 460.41 316.4 405.29 259.37 334.92 259.37"/>
+        <polyline class="cls-1" points="530.98 486.47 387.38 486.47 274.23 614.96 173.76 614.84"/>
+        <polyline class="cls-1" points="530.53 614.96 453.84 614.96 424.65 555.55 372.56 556.03"/>
+        <ellipse class="cls-1" cx="10.41" cy="102.54" rx="8.13" ry="7.83" transform="translate(-83.6 60.29) rotate(-60)"/>
+        <ellipse class="cls-2" cx="304.24" cy="40.62" rx="8.13" ry="7.83" transform="translate(116.94 283.79) rotate(-60)"/>
+        <ellipse class="cls-1" cx="143.67" cy="162.96" rx="8.13" ry="7.83" transform="translate(-69.29 205.9) rotate(-60)"/>
+        <ellipse class="cls-2" cx="83.68" cy="210.01" rx="8.13" ry="7.83" transform="translate(-140.04 177.47) rotate(-60)"/>
+        <ellipse class="cls-1" cx="192.1" cy="296.58" rx="8.13" ry="7.83" transform="translate(-160.8 314.66) rotate(-60)"/>
+        <ellipse class="cls-2" cx="327.97" cy="258.94" rx="8.13" ry="7.83" transform="translate(-60.27 413.5) rotate(-60)"/>
+        <ellipse class="cls-1" cx="101.82" cy="457.15" rx="8.13" ry="7.83" transform="translate(-345 316.75) rotate(-60)"/>
+        <ellipse class="cls-2" cx="75.35" cy="567.73" rx="8.13" ry="7.83" transform="translate(-453.99 349.12) rotate(-60)"/>
+        <ellipse class="cls-1" cx="165.34" cy="615.37" rx="8.13" ry="7.83" transform="translate(-450.26 450.87) rotate(-60)"/>
+        <ellipse class="cls-2" cx="304.74" cy="412.75" rx="8.13" ry="7.83" transform="translate(-205.08 470.28) rotate(-60)"/>
+        <ellipse class="cls-1" cx="364.09" cy="556.11" rx="8.13" ry="7.83" transform="translate(-299.56 593.37) rotate(-60)"/>
+      </g>
+      <g>
+        <polyline class="cls-1" points="525 1054.16 445.36 1054.16 405.03 939.25 255.18 939.25 199.63 845.64 103.81 845.64"/>
+        <polyline class="cls-1" points="525 902.33 406.01 902.33 323.09 1006.51 194.39 1006.51"/>
+        <polyline class="cls-1" points="524.1 785.76 353.29 785.76 267.79 810.3 189.23 810.3 126.01 734.75 77.93 734.78"/>
+        <polyline class="cls-1" points="524.1 851.2 413.67 851.2 353.29 890.06 307.31 890.06"/>
+        <polyline class="cls-1" points="525 986.17 453.97 986.17 398.86 1043.2 328.49 1043.2"/>
+        <polyline class="cls-1" points="524.55 816.1 380.95 816.1 267.79 687.61 167.33 687.73"/>
+        <polyline class="cls-1" points="524.1 687.61 447.41 687.61 418.21 747.02 366.13 746.54"/>
+        <ellipse class="cls-2" cx="185.67" cy="1005.99" rx="7.83" ry="8.13" transform="translate(-478.12 227.61) rotate(-30)"/>
+        <ellipse class="cls-1" cx="321.54" cy="1043.63" rx="7.83" ry="8.13" transform="translate(-478.74 300.59) rotate(-30)"/>
+        <ellipse class="cls-1" cx="95.38" cy="845.42" rx="7.83" ry="8.13" transform="translate(-409.93 160.96) rotate(-30)"/>
+        <ellipse class="cls-1" cx="68.92" cy="734.84" rx="7.83" ry="8.13" transform="translate(-358.19 132.91) rotate(-30)"/>
+        <ellipse class="cls-2" cx="158.91" cy="687.2" rx="7.83" ry="8.13" transform="translate(-322.31 171.52) rotate(-30)"/>
+        <ellipse class="cls-2" cx="298.3" cy="889.82" rx="7.83" ry="8.13" transform="translate(-404.95 268.36) rotate(-30)"/>
+        <ellipse class="cls-1" cx="357.66" cy="746.46" rx="7.83" ry="8.13" transform="translate(-325.31 278.84) rotate(-30)"/>
+      </g>
+    </g>
+  </g>
+</svg>
