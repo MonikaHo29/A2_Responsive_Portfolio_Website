@@ -1,0 +1,233 @@
+/* Center the loader */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('styleguide/fonts/ticking-timebomb-bb/TickingTimebombBB.ttf') format('truetype'),
+       url('styleguide/fonts/ticking-timebomb-bb/TickingTimebombBB_ital.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.introduction{
+  margin-top: -45%;
+  left: 10%;
+  position: absolute;
+  display: flex;
+}
+h3{
+  font-size: 2rem;
+  font-weight: 400;
+  text-wrap: nowrap;
+}
+html,
+body {
+  display: flex;
+  position: relative;
+  justify-items: center;
+  align-items: center;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-family:'MyCustomFont';
+}
+
+/* LOADING PAGE*/
+#loader {
+  width: 8%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: loaderAnimation 8s forwards;
+}
+@keyframes loaderAnimation {
+  0% {
+    width: 8%;
+    opacity: 0.1;
+  }
+  25% {
+    width: 12%;
+    opacity: 1;
+  }
+  50% {
+    width: 8%;
+    opacity: 0.1;
+  }
+  75% {
+    width: 12%;
+    opacity: 1;
+  }
+  100% {
+    width: 8%;
+    opacity: 0.1;
+  }
+}
+
+/* HOMPAGE FADE IN */
+.homepage {
+  position: relative;
+  -webkit-animation-name: homepagfadeIn;
+  -webkit-animation-duration: 1s;
+  animation-name: homepagfadeIn;
+  animation-duration: 5s;
+}
+@-webkit-keyframes homepagfadeIn {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+@keyframes homepagfadeIn {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
+/* HEADER + NAVIGATION*/
+header {
+  background-color: black;
+  width: 100%;
+  height: 15%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 5%;
+  left: 0;
+  padding: 0 20px;
+}
+.logo {
+  width: 6%;
+  height: 100%;
+  margin-left: 45%;
+}
+/*BURGER MENU*/
+.off-screen-menu {
+    background-color:  #f6f6f680;
+    border: 8px solid #23EDF4;
+    box-shadow: 0 0 10px 5px #23EDF4;
+    border-radius: 25px;
+    opacity: 30%;
+    height: 80vh;
+    width: 20vw;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    right: -450px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .6s ease;
+}
+.off-screen-menu.active {
+    right: 140px;
+    opacity: 50%;
+}
+nav {
+    padding: 1rem;
+    display: flex;
+}
+ul{
+    color: white;
+    list-style-type: none;
+    line-height: 3em;
+}
+a{
+    text-decoration: none;
+}
+/* ham menu */
+.ham-menu {
+    margin-left: auto;
+    position: relative;
+}
+.burger{
+    width: 60%;
+}
+.ham-menu span {
+    opacity: 30%;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+.ham-menu.active span {
+    opacity: 100%;
+}
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/*BACKGROUND*/
+.redline{
+    width: 70%;
+    margin-top: 2%;
+    left:-5%;
+    position: absolute;
+    display: flex;
+}
+.blueline{
+    width: 70%;
+    margin-top: 55%;
+    left: 180%;
+    position: relative;
+    display: flex;
+}
+
+/*BUTTONS*/
+
+/*Power Button*/
+#showImageBtn {
+  width: 100px; /* Breite des Button-Bildes */
+  height: auto; /* Seitenverhältnis beibehalten */
+  transition: transform 0.3s ease; /* Optional: Animation bei Hover */
+  position: absolute;
+  margin-top: -100%;
+  margin-left: 61.5%;
+}
+
+#showImageBtn:hover {
+  transform: scale(1.1); /* Vergrößert das Bild leicht beim Hover */
+}
+
+#image {
+  max-width: 100%; /* Zielbild bleibt responsiv */
+  height: auto;
+  display: none; /* Versteckt das Bild standardmäßig */
+  position: absolute;
+  margin-top: -%;
+  margin-left: 61%;
+}
